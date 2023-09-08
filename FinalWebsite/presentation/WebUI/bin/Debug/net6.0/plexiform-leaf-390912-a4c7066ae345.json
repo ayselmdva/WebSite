@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "plexiform-leaf-390912",
+  "private_key_id": "a4c7066ae345e5853a9f61952f9636ea7b0b67ae",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDIn/8+Ti8iqfz9\nfA4k8X+/MLH6Qg/Becz51btpA1tjhOBDP3sJ4Vhvx/p9lUWcucfPDMtoNVChx1jI\n/IaRZMznu4Nrzy8pbXquNQWqdyYqAOFF8eaIiSgyUHqDQoLLDPR0sFmyiXg3S8a2\nRDkka/0PY/TY4GufteqgFEpDONzcuaFa9990ZNM8j1RM7RVk4qZbqVttb3KZCNY/\nUq1BLQytnVqU33ULxhNC2XfJujjSSsPGLFWcl/1a6ffEKy6rb4c72lqnI1g1Wsgs\nnEdrN0sszwc8QNdM2+bUFqhZXxjsgpmu2epSuvev8G2XfS7C9D8zhLkSDQ6JKcQE\nFAfcxDdxAgMBAAECggEAQhsqNQL5GBBwCqxGUtj6cWqfsmjzHRq/tjC9XHhdNBkT\n9kSkC5jjlY2M1bWKZv52PpymJ3Ot2mi/shY3VxAiTlckkjEGBr4Ktv1EnSs+eYep\nsuzmu+WJx65p9/dB9psRr6NuItyWLo4671Lii0RD8b7LbmzgOZNtOIsG/0hsyhOQ\nE20R3WdBJLaxeUA+SY+jHTyOzRs6cg2bo6Grf2juqjr7wBIQlG0ylivb3MHH2R4R\nZbNjvvrKJyRRnWeFEI8VAO4Y/yI7Waqz0vMjXqBgUDhd0R1RZrSYBLE42D7xiF1G\nMgJ2mW3U2Z7rLF1NHw/9SMOy6/iwzBEeW1zCIhQFmwKBgQD/XOD3CetkYmUVtK65\n7euJJKbrH8dYBUxRRHxnKOvrvmF2kmTegGmnyNJM9TT7gCynnWsKl+WdiJcsxApM\n+ly5vXfWG5NVD2ci8gNw7jMcMq/yrNpV8g9MIaOQeFlB8YV3fY7YDusIGI6g3FsF\nAm1UVyRt7842i96RJElrCivIzwKBgQDJICcZIkJNJ7WsYJyuG3npqlx+ZxvUmC5s\nuNBGEfFJA46vcElrD5G1EsFDwO89Fbra3ADS7JPewidZBm8C8ZR5+doj48EP4Crc\nDk0/VeqDMuXu9/Vx+QOvbwu9+Nd9ZsB6N6/jygWloqKSPdt/Eru6DSQv5Sr4xWGZ\nctySoR+LvwKBgFdr0IhCGRfQp5J6vKZiURQuPAaaZoA3sBzSOVSHqdyW3H7fNzEE\n/Sa3lWdLOswu4RqwxYhm3/DCZh6pLm2T+FKODox5/EJOd5x7BbqPkWfB4oJNsqFh\nsOL7USeQS95LdMmnblOBJ+0pmwpu5aodXphVDN+mDQ6Xa6Z8qbW/UaX5AoGAPdaK\n7ulfpUVOUF+sDMQZ6cQdiCe/oM/hhkAUmVau7xoO5tYJXMd+r0PC9Ef/xrJFr0Dx\nZ+ihVl4vpumZfDg2xIITlfFSzMTJqLsk+RI7dndRxvWqG47KmUf1PkWiS8Yp6+nv\nRIQ61EB656fpMtrZqUydEbTOT4qwhXORaevsPRUCgYEArZJalj/lKLEDoVutf+Ot\nmXRLNVMekQAw1G+7lCDheeuT0HrbW6sJe1hM+JQKbCip5Cl8ttGQuvofwSC3LGKe\nyEfwFAxIEsc4qb7CpmkcGO2dJxSSUuJJUHrLRuSTJzpi7yhTh/nloQUM7Dgy9fmw\nK1+eH1kx7jMfUTslKPWH+g0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bucket-movie@plexiform-leaf-390912.iam.gserviceaccount.com",
+  "client_id": "105773849356928482857",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bucket-movie%40plexiform-leaf-390912.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

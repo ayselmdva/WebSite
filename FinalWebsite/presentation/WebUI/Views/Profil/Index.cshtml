@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="hero user-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1>@User.Identity.Name’s profile</h1>
+					<ul class="breadcumb">
+						<li class="active"><p >Home</p></li>
+						<li> <span class="ion-ios-arrow-right"></span>Profile</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-3 col-sm-12 col-xs-12">
+				<div class="user-information">
+					<div class="user-img">
+						
+					</div>
+					<div class="user-fav">
+						
+					</div>
+					<div class="user-fav">
+						<ul>
+							<li><a asp-controller="Account" asp-action="LogOut">Log out</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+</div>

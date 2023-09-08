@@ -1,0 +1,38 @@
+﻿@using FinalWebsite.Data.Entities;
+
+@{
+    ViewData["Title"] = "BuyTicket";
+    Layout = null;
+}
+
+@model ShoppingCart
+
+<input hidden asp-for="MovieId"/>
+    <div class="bg-secondary rounded h-100 p-4" style="width: 81% ">
+        <h3 class="mb-4">Buy Ticket</h3>
+        <form asp-action="BuyTicket" class="forms-sample" method="post" enctype="multipart/form-data">
+            <div class="row">
+            <div class="movie-img sticky-sb col-6">
+                <img src="~/manage/img/uploads/@Model.Movie.Image" alt="" width="50%" height="50%">
+              </div>
+              <div class="col-6">
+            <div class="form-group">
+                <label asp-for="Movie.Name">Name</label>
+                <input asp-for="Movie.Name" class="form-control" id="exampleInputName1" disabled>
+            </div>
+            <div class="form-group">
+                <label asp-for="Count">Count</label>
+                <input asp-for="Count" class="form-control" id="exampleInputName1" placeholder="Count">
+                <span asp-validation-for="Count"></span>
+            </div>
+            <br />
+            <div>
+                <button type="submit" class="btn btn-success mr-2">Submit</button>
+                <button asp-action="Detail" class="btn btn-light">Cancel</button>
+            </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+			

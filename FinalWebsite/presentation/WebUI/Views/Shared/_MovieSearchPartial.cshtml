@@ -1,0 +1,34 @@
+﻿@using FinalWebsite.Business.DTOs.SearchDto;
+@using FinalWebsite.Data.Entities;
+
+
+@*@model SearchDto
+
+<form asp-controller="Movies" asp-action="Search">
+	<div class="top-search">
+		<select asp-for="GenreId" asp-items="new SelectList(Model.Genres,nameof(Genre.Id),nameof(Genre.Name))">
+			<option value="united">All Genres</option>
+		</select>
+		<input id="search" asp-for="@Model.Name" type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+		<button class="btn btn-dark" type="submit">Search</button>
+	</div>
+
+
+</form>*@
+
+@model List<Movie>
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table w-100">
+        <tbody>
+            @foreach (Movie movie in Model)
+            {
+                <tr>
+
+                    <td class="d-flex justify-content-center align-items-center"><img style="width:100px; height:100px;" src="~/assets/photos/products/@movie.Image" /></td>
+                    <td class="pro-title d-flex justify-content-center align-items-center"><a asp-controller="Movies" asp-action="Detail" asp-route-name="@movie.Name">@movie.Name</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

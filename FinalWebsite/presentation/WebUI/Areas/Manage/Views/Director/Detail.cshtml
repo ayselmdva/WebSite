@@ -1,0 +1,17 @@
+﻿@using FinalWebsite.Data.Entities;
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+@model Director
+<div class="col-12 d-flex d-flex justify-content-end mr-2 mb-1 mt-3">
+    <h1>@Model.FullName</h1>
+
+    <div class="container" style="margin-left:110px">
+        <img src="~/manage/img/uploads/@Model.Image" style="width: 200px; height: 200px;" />
+    </div>
+    <div style="margin-right: 300px">
+        <p style="margin-right:300px">@Model.About</p>
+    </div>
+</div>

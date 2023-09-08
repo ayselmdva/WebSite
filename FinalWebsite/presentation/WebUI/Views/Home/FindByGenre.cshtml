@@ -1,0 +1,56 @@
+﻿@using FinalWebsite.WebUI.View_Models;
+
+@{
+    ViewData["Title"] = "FindByGenre";
+}
+
+@model HomeVM
+
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1> @Model.Genre.Name</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single movie_list">
+	<div class="container">
+		<div class="row ipad-width2">
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="topbar-filter">
+					<p>Found <span>@Model.Genre.Movies.Count() movies</span></p>
+				</div>
+				@foreach(var movie in Model.Genre.Movies)
+				{
+				<div class="movie-item-style-2">
+						<img src="~/manage/img/uploads/@movie.Image" alt="">
+					<div class="mv-item-infor">
+						<h6><a asp-controller="Movies" asp-action="Detail" asp-route-name="@movie.Name">@movie.Name <span>(@movie.Year)</span></a></h6>
+						<p class="describe"></p>
+						<p class="rate"><i class="ion-android-star"></i><span>@movie.Rate</span> /10</p>
+						<p class="run-time"> Run Time: @movie.RunTime h</p>
+					</div>
+				</div>
+				}
+				<div class="topbar-filter">
+					<div class="pagination2">
+						<span>Page 1 of 2:</span>
+						<a class="active" href="#">1</a>
+						<a href="#">2</a>
+						<a href="#"><i class="ion-arrow-right-b"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="sidebar">
+					<div class="ads">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

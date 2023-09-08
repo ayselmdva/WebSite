@@ -1,0 +1,12 @@
+﻿global using FinalWebsite.Data.Entities.Common;
+global using System.Linq.Expressions;
+global using FinalWebsite.DataAccess.Repositories.Abstract;
+global using JwtExample.Data.DataAccess;
+global using WebApp.Repositories.Abstract;
+global using FinalWebsite.Data.Entities;
+global using WebApp.Repositories.Concrete;
+global using Microsoft.EntityFrameworkCore;
+global using FinalWebsite.DataAccess.Repositories.Concrete;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Reflection;

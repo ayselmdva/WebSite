@@ -1,0 +1,24 @@
+﻿@using FinalWebsite.Data.Entities;
+@using FinalWebsite.WebUI.View_Models;
+
+@{
+    ViewData["Title"] = "Detail";
+}
+@model Movie
+<div class=" ">
+    <div style="display:flex; margin-left:265px">
+        <p>Movie Name</p>
+        <p>@Model.Name</p>
+    </div>
+    <div style=" margin-left:260px">
+        <p>Description: </p>
+       <br />
+        <p>@Model.Description</p>
+    </div>
+    <div style="margin-left:300px">
+        <P>Film</P>
+         <video width="500px" controls>
+        <source src="~/manage/img/uploads/@Model.Video" type="video/mp4">
+         </video>
+        </div>
+</div>

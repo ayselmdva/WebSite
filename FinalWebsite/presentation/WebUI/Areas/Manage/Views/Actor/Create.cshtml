@@ -1,0 +1,37 @@
+﻿@using FinalWebsite.Data.Entities;
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@model Actor
+
+
+<div class="col-sm-12 col-xl-12 d-flex justify-content-end mt-3">
+    <div class="bg-secondary rounded h-100 p-4" style="width: 81% ">
+        <h6 class="mb-4">Actor</h6>
+        <form asp-action="Create" class="forms-sample" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="FullName">FullName</label>
+                <input asp-for="FullName" class="form-control" id="exampleInputName1" placeholder="FullName">
+                <span asp-validation-for="FullName"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="About">About</label>
+                <input asp-for="About" class="form-control" id="exampleInputName1" placeholder="About">
+                <span asp-validation-for="About"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFile">ImageFile</label>
+                <input asp-for="ImageFile" class="form-control bg-dark" id="exampleInputName1" accept="image/*" placeholder="ImageFile">
+                <span asp-validation-for="ImageFile"></span>
+            </div>
+            <br />
+            <div>
+                <button type="submit" class="btn btn-success mr-2">Submit</button>
+                <button asp-action="Index" class="btn btn-light">Cancel</button>
+            </div>
+
+        </form>
+    </div>
+</div>

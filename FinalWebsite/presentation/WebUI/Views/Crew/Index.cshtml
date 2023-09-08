@@ -1,0 +1,62 @@
+﻿@using FinalWebsite.WebUI.View_Models;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model HomeVM
+
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1>Crew</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="topbar-filter fw"><p>Directors</p></div>
+
+				<div class="flex-wrap-movielist mv-grid-fw">
+					@foreach (var director in Model.Directors)
+					{
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="~/manage/img/uploads/@director.Image" alt="">
+							<div class="hvr-inner">
+								<a asp-controller="Crew" asp-action="Detail" asp-route-name="@director.FullName"> View Detail <i class="ion-android-arrow-dropright"></i> </a>
+							</div>
+							<div class="mv-item-infor">
+								<h6><a href="#">@director.FullName</a></h6>
+							</div>
+						</div>
+					
+					}
+				</div>
+
+				<div class="topbar-filter fw"><p>Actors</p></div>
+				<div class="flex-wrap-movielist mv-grid-fw">
+					@foreach (var actor in Model.Actors)
+					{
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="~/manage/img/uploads/@actor.Image" alt="">
+							<div class="hvr-inner">
+								<a asp-controller="Crew" asp-action="Detail" asp-route-name="@actor.FullName"> View Detail <i class="ion-android-arrow-dropright"></i> </a>
+							</div>
+							<div class="mv-item-infor">
+								<h6><a href="#">@actor.FullName</a></h6>
+							</div>
+						</div>
+
+					}
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>

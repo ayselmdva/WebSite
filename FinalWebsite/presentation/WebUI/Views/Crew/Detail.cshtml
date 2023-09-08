@@ -1,0 +1,77 @@
+﻿@using FinalWebsite.WebUI.View_Models;
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+@model HomeVM
+
+<div class="hero mv-single-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- <h1> movie listing - list</h1>
+				<ul class="breadcumb">
+					<li class="active"><a href="#">Home</a></li>
+					<li> <span class="ion-ios-arrow-right"></span> movie listing</li>
+				</ul> -->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single movie-single movie_single">
+	<div class="container">
+		<div class="row ipad-width2">
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="movie-img sticky-sb">
+					<img src="~/manage/img/uploads/@Model.Image" alt="">
+					<div class="movie-btn text-w">
+						<h1>@Model.FullName</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="movie-single-ct main-content">
+					<div class="title-hd-sm">
+					</div>
+					<div class="movie-tabs">
+						<div class="tabs">
+							<ul class="tab-links tabs-mv">
+								<li class="active"><a href="#overview">About</a></li>
+								<li><a href="#cast">Movies</a></li>
+							</ul>
+							<div class="tab-content">
+								<div id="overview" class="tab active">
+									<div class="row">
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p>@Model.About</p>
+										</div>
+										<div class="col-md-4 col-xs-12 col-sm-12">
+										</div>
+									</div>
+								</div>
+								
+								<div id="cast" class="tab">
+									<div class="row">
+										<div class="mvcast-item">
+											<div class="cast-it">
+												@foreach(var movie in Model.Movies)
+												{
+												<div class="cast-left">
+													<h4>*</h4>
+													<a asp-controller="Movies" asp-action="Detail" asp-route-name="@movie.Name">@movie.Name</a>
+												</div>													
+												<p>@movie.Year</p>
+												}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

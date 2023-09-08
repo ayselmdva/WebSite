@@ -1,0 +1,14 @@
+﻿@using FinalWebsite.Business.DTOs.SearchDto;
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+@model List<SearchDto>
+
+<div>
+    @foreach (var item in Model)
+    {
+        <li>@item</li>
+    }
+</div>

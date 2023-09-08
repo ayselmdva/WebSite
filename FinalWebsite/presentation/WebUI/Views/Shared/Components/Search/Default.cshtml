@@ -1,0 +1,20 @@
+﻿@using FinalWebsite.Business.DTOs.SearchDto;
+@using FinalWebsite.Data.Entities;
+@using FinalWebsite.WebUI.View_Models;
+
+@model SearchDto
+
+
+
+
+<form asp-controller="Movies" asp-action="Search">
+	<div class="top-search">
+		<select asp-for="GenreId" asp-items="new SelectList(Model.Genres,nameof(Genre.Id),nameof(Genre.Name))">
+			<option value="united">All Genres</option>
+		</select>
+		<input id="search" asp-for="@Model.Name" type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+		<button class="btn btn-dark" type="submit">Search</button>
+	</div>
+
+
+</form>

@@ -1,0 +1,17 @@
+﻿@using FinalWebsite.Data.Entities;
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+@model Actor
+<div class="col-12 d-flex justify-content-center mr-2 mb-1 mt-3">
+    <h1>@Model.FullName</h1>
+
+    <div class="container" style="margin-left:200px">
+        <img src="~/manage/img/uploads/@Model.Image" style="width: 200px; height: 200px;" />
+    </div>
+    <div>
+        <p style="margin-right:50px">@Model.About</p>
+    </div>
+</div>

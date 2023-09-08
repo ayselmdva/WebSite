@@ -1,0 +1,25 @@
+﻿@using FinalWebsite.Data.Entities;
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@model Genre
+
+<div class="col-12 align-content-xl-end d-flex justify-content-end mr-2 mb-1 mt-3 me-3">
+    <div class="bg-secondary rounded h-100 p-4" style="width: 81% ">
+        <h6 class="mb-4">Genre</h6>
+        <form asp-action="Create" class="forms-sample" method="post">
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control" id="exampleInputName1" placeholder="Name">
+                <span asp-validation-for="Name"></span>
+            </div>
+            <br />
+            <div>
+                <button type="submit" class="btn btn-success mr-2">Submit</button>
+                <button asp-action="Index" class="btn btn-light">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

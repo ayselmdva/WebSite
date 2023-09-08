@@ -1,0 +1,156 @@
+﻿@using FinalWebsite.Data.Entities;
+@using FinalWebsite.WebUI.View_Models;
+
+
+@{
+    ViewData["Title"] = "Detail";
+}
+@model Movie
+
+<div class="hero mv-single-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- <h1> movie listing - list</h1>
+				<ul class="breadcumb">
+					<li class="active"><a href="#">Home</a></li>
+					<li> <span class="ion-ios-arrow-right"></span> movie listing</li>
+				</ul> -->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single movie-single movie_single">
+	<div class="container">
+		<div class="row ipad-width2">
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="movie-img sticky-sb">
+					<img src="~/manage/img/uploads/@Model.Image" alt="">
+					<div class="movie-btn">
+						<div class="btn-transform transform-vertical red">
+							<div><a asp-action="Whatch" asp-route-name="@Model.Name">  Watch</a></div>
+						</div>
+						<div >
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="movie-single-ct main-content">
+					<h1 class="bd-hd">@Model.Name<span>@Model.Year</span></h1>
+					<div class="title-hd-sm">
+					</div>
+					<div class="movie-tabs">
+						<div class="tabs">
+							<ul class="tab-links tabs-mv">
+								<li class="active"><a href="#overview">Overview</a></li>
+								<li><a href="#reviews"> Reviews</a></li>
+								<li><a href="#cast">  Crew</a></li>
+							</ul>
+							<div class="tab-content">
+								<div id="overview" class="tab active">
+									<div class="row">
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p>@Model.Description</p>
+										</div>
+										<div class="col-md-4 col-xs-12 col-sm-12">
+											<div class="sb-it">
+												<h6>Director: </h6>
+												<p><a asp-controller="Crew" asp-action="Detail" asp-route-name="@Model.Director.FullName">@Model.Director.FullName</a></p>
+											</div>
+											<div class="sb-it">
+												<h6>Writer: </h6>
+												<p><a href="#">Joss Whedon,</a> <a href="#">Stan Lee</a></p>
+											</div>
+											<div class="sb-it">
+												<h6>Actors: </h6>
+												@foreach(var actor in Model.Actors)
+												{
+													<p><a asp-controller="Crew" asp-action="Detail" asp-route-name="@actor.FullName">@actor.FullName,</a></p>
+												}
+											</div>
+											<div class="sb-it">
+												<h6>Genres:</h6>
+												<p><a href="#">@Model.Genre.Name </a></p>
+											</div>
+											<div class="sb-it">
+												<h6>Release Date:</h6>
+												<p>@Model.Year</p>
+											</div>
+											<div class="sb-it">
+												<h6>Run Time:</h6>
+												<p>@Model.RunTime min</p>
+											</div>
+											<div class="sb-it">
+												<h6>Rating:</h6>
+												<p>@Model.Rate</p>
+											</div>
+											<div class="ads">
+												<img src="images/uploads/ads1.png" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="reviews" class="tab review">
+									@*@foreach(var commet in Model.Comments)
+									{
+										<div class="mv-user-review-item">
+											<div class="user-infor">
+												<img src="images/uploads/userava3.jpg" alt="">
+												<div>
+													<h3>@commet.AppUser.Name</h3>
+													
+													<p class="time">
+														@commet.Date
+													</p>
+												</div>
+											</div>
+											<p>@commet.Description</p>
+
+										</div>
+									}
+									@await Component.InvokeAsync("Comment",new {id=Model.Id});*@
+								</div>
+								<div id="cast" class="tab">
+									<div class="row">
+										<div class="title-hd-sm">
+											<h4>Director</h4>
+										</div>
+										<div class="mvcast-item">
+											<div class="cast-it">
+												<div class="cast-left">
+													<img width="40px" height="40px" src="~/manage/img/uploads/@Model.Director.Image"/>
+													<a asp-controller="Crew" asp-action="Detail" asp-route-name="@Model.Director.FullName">@Model.Director.FullName</a>
+												</div>
+											</div>
+										</div>
+										<!-- //== -->
+										<div class="title-hd-sm">
+											<h4>Actors</h4>
+										</div>
+										<div class="mvcast-item">
+										@foreach(var actor in Model.Actors)
+										{
+											<div class="cast-it">
+												<div class="cast-it">
+													<div class="cast-left">
+														<img width="40px" height="40px" src="~/manage/img/uploads/@actor.Image" />
+															<a asp-controller="Crew" asp-action="Detail" asp-route-name="@actor.FullName">@actor.FullName</a>
+													</div>														
+												</div>
+											</div>
+										}
+										</div>
+										<!-- //== -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
